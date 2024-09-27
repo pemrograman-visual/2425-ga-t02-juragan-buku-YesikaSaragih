@@ -37,6 +37,8 @@ public class T02 {
                     } else {
                         if (rating < 3.0 && rating > 0.0) {
                             kualitas = "Low";
+                        } else {
+                            kualitas = "Error";
                         }
                     }
                 }
