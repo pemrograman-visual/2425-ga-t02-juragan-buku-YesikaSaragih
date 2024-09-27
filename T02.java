@@ -22,15 +22,14 @@ public class T02 {
         minimumMargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        kualitas = "";
         if (rating >= 4.7 && rating < 5.0) {
-            kualitas = "BestPick";
+            kualitas = "Best Pick";
         } else {
             if (rating >= 4.5 && rating < 4.7) {
-                kualitas = "MustRead";
+                kualitas = "Must Read";
             } else {
                 if (rating >= 4.0 && rating < 4.5) {
-                    kualitas = "Recommend";
+                    kualitas = "Recommended";
                 } else {
                     if (rating >= 3.0 && rating < 4.0) {
                         kualitas = "Average";
