@@ -3,11 +3,11 @@
 import java.util.*;
 import java.lang.Math;
 
-public class JavaApplication {
+public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String iSBN, judul, penulis, penerbit, formatBuku, kualitas, bestPick, mustRead, recommend, average, low;
+        String iSBN, judul, penulis, penerbit, formatBukuElektronik, kategori;
         int tahunTerbit, stok;
         double hargaPembelian, minimumMargin, rating;
 
@@ -16,33 +16,28 @@ public class JavaApplication {
         penulis = input.nextLine();
         tahunTerbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
-        formatBuku = input.nextLine();
+        formatBukuElektronik = input.nextLine();
         hargaPembelian = Double.parseDouble(input.nextLine());
         minimumMargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        if (rating >= 4.7 && rating < 5.0) {
-            kualitas = "Best Pick";
+        if (rating >= 4.7) {
+            kategori = "Best Pick";
         } else {
-            if (rating >= 4.5 && rating < 4.7) {
-                kualitas = "Must Read";
+            if (rating >= 4.5) {
+                kategori = "Must Read";
             } else {
-                if (rating >= 4.0 && rating < 4.5) {
-                    kualitas = "Recommended";
+                if (rating >= 4.0) {
+                    kategori = "Recommended";
                 } else {
-                    if (rating >= 3.0 && rating < 4.0) {
-                        kualitas = "Average";
+                    if (rating >= 3.0) {
+                        kategori = "Average";
                     } else {
-                        if (rating <= 3.0 && rating > 0.0) {
-                            kualitas = "Low";
-                        } else {
-                            kualitas = "Error";
-                        }
+                        kategori = "Low";
                     }
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBuku + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kualitas);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kategori);
     }
 }
-
