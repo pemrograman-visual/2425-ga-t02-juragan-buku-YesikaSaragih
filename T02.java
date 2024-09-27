@@ -1,10 +1,9 @@
 // 12S24024 - Yesika Nadia Saragih
 // 12S24027 - Grasia Gayatri Simanullang
-
 import java.util.*;
 import java.lang.Math;
 
-public class T02 {
+public class JavaApplication {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -34,7 +33,7 @@ public class T02 {
                     if (rating >= 3.0 && rating < 4.0) {
                         kualitas = "Average";
                     } else {
-                        if (rating < 3.0 && rating > 0.0) {
+                        if (rating <= 3.0 && rating > 0.0) {
                             kualitas = "Low";
                         } else {
                             kualitas = "Error";
@@ -46,3 +45,4 @@ public class T02 {
         System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBuku + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kualitas);
     }
 }
+
